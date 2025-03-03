@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "MacroRight",
+    "version": "1.0",
+    "description": "An chrome extension that will help you stay on track with your diet goals by filtering out food based on your preferences.",
+    "permissions": ["storage", "scripting", "activeTab"],
+    "host_permissions": [
+        "https://*.ubereats.com/*",
+        "https://*.doordash.com/*"
+      ],
+    "action" : {
+        "default_popup" : "interface.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+          }
+        },
+    "content_scripts": [
+        {
+        "matches": ["https://*.ubereats.com/*", "https://*.doordash.com/*"],
+        "js": ["content.js"]
+        }
+    ]
+}
