@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Macro Diet Filter</title>
+  <style>
+    body { width: 350px; max-height: 500px; padding: 10px; overflow-y: auto; font-family: Arial, sans-serif; }
+    
+    .goal-panel { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+    button { width: 100%; padding: 8px; background: #FF3008; color: white; border: none; border-radius: 4px; cursor: pointer; margin-top: 10px; }
+    button:hover { background: #E02900; }
+    
+    .menu-items { max-height: 350px; overflow-y: auto; }
+    .menu-item { display: flex; border: 1px solid #e0e0e0; padding: 12px; margin-bottom: 10px; border-radius: 4px; }
+    .menu-item-image { width: 80px; height: 80px; margin-right: 12px; background-size: cover; background-position: center; border-radius: 4px; }
+    .menu-item-details { flex: 1; }
+    .menu-item-name { font-weight: bold; font-size: 16px; margin-bottom: 5px; }
+    .menu-item-restaurant { color: #666; margin-bottom: 5px; font-size: 14px; }
+    .menu-item-macros { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 5px; }
+    .macro { padding: 3px 6px; border-radius: 3px; font-size: 13px; }
+    .protein { background: #e8f5e9; color: #2e7d32; }
+    .calories { background: #fff3e0; color: #ef6c00; }
+    .efficiency { background: #e3f2fd; color: #1565c0; }
+    .menu-item-price { font-weight: bold; color: #FF3008; }
+    
+    .loading { text-align: center; color: #666; padding: 20px; }
+    .spinner { width: 20px; height: 20px; border: 3px solid #f3f3f3; border-top: 3px solid #FF3008; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    
+    .no-results { text-align: center; color: #666; padding: 20px; }
+  </style>
+</head>
+<body>
+  <div class="goal-panel">
+    <h3>High Protein, Low Calorie Options</h3>
+    <p style="color: #666; font-size: 14px;">Items are sorted by protein efficiency (protein-to-calorie ratio compared to national average)</p>
+    <button id="scan-now">Scan Menu Items</button>
+  </div>
+  
+  <div id="menu-items-container">
+    <div class="loading">
+      <div class="spinner"></div>
+      <p>Please open a DoorDash restaurant page and click "Scan Menu Items"</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

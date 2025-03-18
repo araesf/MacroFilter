@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="#FF3008"/>
+  
+  <!-- Protein symbol (P) -->
+  <path d="M45 35h25c8 0 13 5 13 13 0 8-5 13-13 13h-8v12h-10V35zm25 20c3 0 5-2 5-5s-2-5-5-5h-15v10h15z" 
+        fill="white"/>
+  
+  <!-- Filter lines -->
+  <path d="M35 85h58M35 95h58M35 105h58" 
+        stroke="white" 
+        stroke-width="4" 
+        stroke-linecap="round"/>
+</svg> 
